@@ -21,9 +21,9 @@ export default function ContactPage() {
 
       <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
-          
+
           {/* Left Side: Communication Hub */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -33,12 +33,12 @@ export default function ContactPage() {
               <div className="w-12 h-[1px] bg-brand-yellow" />
               <span className="text-brand-yellow font-mono text-sm tracking-widest uppercase">Get in Touch</span>
             </div>
-            
+
             <h1 className="text-5xl md:text-7xl font-display font-bold tracking-tighter leading-tight mb-8">
               LET'S GET TO<br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red to-red-900">WORK.</span>
             </h1>
-            
+
             <p className="text-white/60 text-lg md:text-xl leading-relaxed mb-12 max-w-lg font-medium">
               We're here to keep your vehicle running strong. Reach out to our team of expert mechanics to schedule your next service or repair.
             </p>
@@ -59,7 +59,7 @@ export default function ContactPage() {
                 </div>
                 <span className="text-lg font-bold tracking-widest text-white/80 group-hover:text-white transition-colors break-all">soloautomotive@hotmail.com</span>
               </a>
-              
+
               <div className="bg-[#0a0a0a] border border-white/5 p-6 flex flex-col items-start shadow-xl">
                 <div className="flex items-center gap-3 mb-2">
                   <MapPin size={18} className="text-white/40" />
