@@ -4,6 +4,7 @@ import Preloader from './components/Preloader';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import FloatingContactMenu from './components/FloatingContactMenu';
+import LocalBusinessSchema from './components/LocalBusinessSchema';
 
 import Home from './pages/Home';
 import ContactPage from './pages/ContactPage';
@@ -30,6 +31,7 @@ function GlobalInterface({ isReady }: { isReady: boolean }) {
 
   return (
     <>
+      <LocalBusinessSchema />
       <ScrollToTop />
       <Header />
       <Routes>

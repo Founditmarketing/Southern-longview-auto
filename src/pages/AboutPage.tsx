@@ -1,9 +1,15 @@
 import { motion } from 'motion/react';
+import PageSEO from '../components/PageSEO';
 
 export default function AboutPage() {
   return (
     <div className="bg-brand-black min-h-screen text-white pt-0 pb-0">
-      
+      <PageSEO
+        title="About Us | Southern Longview Automotive"
+        description="A small, family-oriented auto repair shop in Longview, TX offering honest, bumper-to-bumper service on gas and diesel vehicles, hot rods, and restorations."
+        path="/about"
+      />
+
       {/* Sleek Banner Hero */}
       <section className="relative h-[40vh] min-h-[300px] w-full border-b border-brand-red/30 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-brand-black via-brand-black/80 to-transparent z-10" />

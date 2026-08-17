@@ -6,19 +6,19 @@ Southern Longview Automotive is a full-service auto repair shop serving Longview
 
 ## Services
 
-- [All Services Overview](https://southernlongviewauto.com/services/things-we-do)
-- [Gas Engine Repair & Replacement](https://southernlongviewauto.com/services/gas-engines)
-- [Diesel Repair & Service](https://southernlongviewauto.com/services/diesels)
-- [Fleet Maintenance](https://southernlongviewauto.com/services/fleet)
-- [Specialty & Performance](https://southernlongviewauto.com/services/specialty)
+- [All Services Overview](https://www.southernlongviewauto.com/services/things-we-do)
+- [Gas Engine Repair & Replacement](https://www.southernlongviewauto.com/services/gas-engines)
+- [Diesel Repair & Service](https://www.southernlongviewauto.com/services/diesels)
+- [Fleet Maintenance](https://www.southernlongviewauto.com/services/fleet-work)
+- [Specialty & Performance](https://www.southernlongviewauto.com/services/specialty)
 
 ## Pages
 
-- [About Us](https://southernlongviewauto.com/about)
-- [Our Team](https://southernlongviewauto.com/team)
-- [Customer Reviews](https://southernlongviewauto.com/reviews)
-- [Financing](https://southernlongviewauto.com/financing)
-- [Contact](https://southernlongviewauto.com/contact)
+- [About Us](https://www.southernlongviewauto.com/about)
+- [Our Team](https://www.southernlongviewauto.com/team)
+- [Customer Reviews](https://www.southernlongviewauto.com/reviews)
+- [Financing](https://www.southernlongviewauto.com/financing)
+- [Contact](https://www.southernlongviewauto.com/contact)
 
 ## Location
 

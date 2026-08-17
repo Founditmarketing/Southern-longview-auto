@@ -2,6 +2,7 @@ import { motion } from 'motion/react';
 import { CreditCard, Rocket, CalendarClock, ExternalLink, ShieldCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SnapFinanceBanner from '../components/SnapFinanceBanner';
+import PageSEO from '../components/PageSEO';
 
 const financeOptions = [
   {
@@ -36,6 +37,11 @@ const financeOptions = [
 export default function FinancingPage() {
   return (
     <div className="bg-brand-black min-h-screen pt-48 md:pt-56 pb-24 text-white">
+      <PageSEO
+        title="Financing Options | Southern Longview Automotive"
+        description="Flexible financing for auto repairs in Longview, TX. Apply with Snap Finance, Affirm, or Sunbit at Southern Longview Automotive."
+        path="/financing"
+      />
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Header Block */}

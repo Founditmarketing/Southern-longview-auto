@@ -1,5 +1,7 @@
 import { motion } from 'motion/react';
 import { Star, MessageSquare } from 'lucide-react';
+import PageSEO from '../components/PageSEO';
+import JsonLd from '../components/JsonLd';
 
 const reviews = [
   {
@@ -26,16 +28,42 @@ const reviews = [
 
 ];
 
+const averageRating = reviews.reduce((sum, r) => sum + r.rating, 0) / reviews.length;
+
 export default function ReviewsPage() {
   return (
     <div className="bg-brand-black min-h-screen text-white pt-0 pb-0">
-      
+      <PageSEO
+        title="Customer Reviews | Southern Longview Automotive"
+        description="See what customers are saying about Southern Longview Automotive — honest, reliable auto repair and service in Longview, TX."
+        path="/reviews"
+      />
+      <JsonLd
+        data={{
+          '@context': 'https://schema.org',
+          '@type': 'AutomotiveBusiness',
+          name: 'Southern Longview Automotive',
+          url: 'https://www.southernlongviewauto.com/',
+          aggregateRating: {
+            '@type': 'AggregateRating',
+            ratingValue: averageRating.toFixed(1),
+            reviewCount: reviews.length,
+          },
+          review: reviews.map((r) => ({
+            '@type': 'Review',
+            author: { '@type': 'Person', name: r.name },
+            reviewRating: { '@type': 'Rating', ratingValue: r.rating },
+            reviewBody: r.review,
+          })),
+        }}
+      />
+
       {/* Sleek Banner Hero */}
       <section className="relative h-[40vh] min-h-[300px] w-full border-b border-brand-red/30 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-brand-black via-brand-black/80 to-transparent z-10" />
-        <img 
-          src="/southernlongviewdesktophero3.jpeg" 
-          alt="Southern Longview Auto Shop" 
+        <img
+          src="/southernlongviewdesktophero3.jpeg"
+          alt="Southern Longview Auto Shop"
           className="absolute inset-0 w-full h-full object-cover object-center"
         />
         <div className="relative z-20 max-w-7xl mx-auto px-6 h-full flex flex-col justify-center pt-24 md:pt-32">

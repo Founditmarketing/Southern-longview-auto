@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
+import PageSEO from '../components/PageSEO';
 
 const team = [
   {
@@ -52,6 +53,11 @@ FUN FACT: Dawn has a Turtle, 2 ferrets, 2 Dogs, and 5 Cats. She loves to cook on
 export default function TeamPage() {
   return (
     <div className="bg-brand-black min-h-screen text-white">
+      <PageSEO
+        title="Meet the Team | Southern Longview Automotive"
+        description="Meet the ASE-certified technicians and staff at Southern Longview Automotive, bringing decades of combined experience to every repair in Longview, TX."
+        path="/team"
+      />
 
       {/* Banner Hero */}
       <section className="relative h-[40vh] min-h-[300px] w-full border-b border-brand-red/30 overflow-hidden">

@@ -1,10 +1,16 @@
 import { motion } from 'motion/react';
 import { Star, MessageSquare, Facebook, MessagesSquare } from 'lucide-react';
+import PageSEO from '../components/PageSEO';
 
 export default function LeaveReviewPage() {
   return (
     <div className="bg-brand-black min-h-screen text-white pt-0 pb-0">
-      
+      <PageSEO
+        title="Leave a Review | Southern Longview Automotive"
+        description="Had a great experience with Southern Longview Automotive? Share your feedback on Google, Facebook, or Yelp."
+        path="/leave-review"
+      />
+
       {/* Sleek Banner Hero */}
       <section className="relative h-[40vh] min-h-[300px] w-full border-b border-brand-red/30 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-brand-black via-brand-black/80 to-transparent z-10" />

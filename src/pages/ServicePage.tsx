@@ -1,5 +1,30 @@
 import { useParams, Navigate } from 'react-router-dom';
 import ServicePageTemplate from '../components/ServicePageTemplate';
+import PageSEO from '../components/PageSEO';
+import JsonLd from '../components/JsonLd';
+
+const seoData: Record<string, { title: string; description: string }> = {
+  'things-we-do': {
+    title: 'Comprehensive Auto Repair | Southern Longview Automotive',
+    description: 'Bumper-to-bumper maintenance and repair for gas and diesel vehicles — diagnostics, repair, and scheduled maintenance in Longview, TX.',
+  },
+  'gas-engines': {
+    title: 'Gas Engine Service & Repair | Southern Longview Automotive',
+    description: 'Gas engine diagnostics, tune-ups, and complete engine replacements for all makes and models in Longview, TX.',
+  },
+  'diesels': {
+    title: 'Diesel Performance & Repair | Southern Longview Automotive',
+    description: 'Specialized diesel diagnostics, repair, and engine replacements for heavy-duty trucks in Longview, TX.',
+  },
+  'fleet-work': {
+    title: 'Fleet Vehicle Maintenance | Southern Longview Automotive',
+    description: 'Priority fleet scheduling and preventative maintenance programs to keep your commercial vehicles on the road in Longview, TX.',
+  },
+  'specialty': {
+    title: 'Specialty & Performance Services | Southern Longview Automotive',
+    description: 'Custom fabrication, restoration, and performance upgrades for classic and modified vehicles in Longview, TX.',
+  },
+};
 
 const serviceData = {
   'things-we-do': {
@@ -175,6 +200,26 @@ export default function ServicePage() {
   }
 
   const data = serviceData[id as keyof typeof serviceData];
+  const seo = seoData[id];
 
-  return <ServicePageTemplate {...data} />;
+  return (
+    <>
+      <PageSEO title={seo.title} description={seo.description} path={`/services/${id}`} />
+      <JsonLd
+        data={{
+          '@context': 'https://schema.org',
+          '@type': 'Service',
+          serviceType: data.title,
+          description: seo.description,
+          areaServed: 'Longview, TX',
+          provider: {
+            '@type': 'AutomotiveBusiness',
+            name: 'Southern Longview Automotive',
+            url: 'https://www.southernlongviewauto.com/',
+          },
+        }}
+      />
+      <ServicePageTemplate {...data} />
+    </>
+  );
 }

@@ -2,12 +2,18 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { Phone, Mail, MapPin } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
+import PageSEO from '../components/PageSEO';
 
 export default function ContactPage() {
 
   return (
     <div className="min-h-[100vh] bg-[#050505] text-white pt-48 md:pt-56 pb-20 relative flex flex-col justify-center">
-      {/* Background Graphic */}
+      <PageSEO
+        title="Contact Us | Southern Longview Automotive"
+        description="Contact Southern Longview Automotive at (903) 653-4901 or visit us at 415 W Marshall Ave, Longview, TX 75601 to schedule your next service."
+        path="/contact"
+      />
+{/* Background Graphic */}
       <div className="absolute top-0 right-0 w-full md:w-1/2 h-full opacity-5 pointer-events-none z-0">
         <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
           <defs>
