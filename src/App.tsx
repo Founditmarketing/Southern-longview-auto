@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import Preloader from './components/Preloader';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -61,6 +62,7 @@ export default function App() {
         <div className="opacity-100">
           <GlobalInterface isReady={!loading} />
         </div>
+        <Analytics />
       </div>
     </Router>
   );
